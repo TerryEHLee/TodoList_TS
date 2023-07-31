@@ -1,8 +1,13 @@
 import React from "react";
 import "./App.css";
+import Todo from "./componensts/Todo";
 
 function App() {
-  return <div>벼랑끝에서</div>;
+  return (
+    <div>
+      <Todo />
+    </div>
+  );
 }
 
 export default App;
