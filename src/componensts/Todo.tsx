@@ -58,6 +58,9 @@ const Todo = () => {
           </Button>
         </div>
         <div>Working</div>
+        {todoList.map((todo, index) => (
+          <TodoItem key={index} title={todo.title} body={todo.body} />
+        ))}
         <div>Done</div>
       </main>
     </div>
