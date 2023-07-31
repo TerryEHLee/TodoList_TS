@@ -61,6 +61,12 @@ const StyledButton = styled.button<{ $styleType: StyleType }>`
           background: #666;
           color: #fff;
         `;
+      case StyleType.FORM_DELETE:
+        return css`
+          ${formStyles}
+          background: #666;
+          color: #fff;
+        `;
       default:
         return ``;
     }
