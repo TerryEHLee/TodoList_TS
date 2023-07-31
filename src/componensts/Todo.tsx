@@ -27,6 +27,12 @@ const Todo = () => {
     handleReset();
   };
 
+  const handleDeleteTodo = (todoToDelete: Todo) => {
+    setTodoList((prevTodoList) =>
+      prevTodoList.filter((todo) => todo !== todoToDelete)
+    );
+  };
+
   return (
     <div>
       <header>
@@ -59,7 +65,7 @@ const Todo = () => {
         </div>
         <div>Working</div>
         {todoList.map((todo, index) => (
-          <TodoItem key={index} title={todo.title} body={todo.body} />
+          <TodoItem key={index} todo={todo} onDelete={handleDeleteTodo} />
         ))}
         <div>Done</div>
       </main>
